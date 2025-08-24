@@ -1,7 +1,6 @@
 # 文件位置：gui/step4_image_display.py
 
 import sys
-import config
 import numpy as np
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout,
                              QGroupBox, QLabel, QPushButton, QScrollArea, QTextEdit)

@@ -29,7 +29,10 @@ class VisualizationFactory:
         visualizer_type = visualizer_type.lower()
 
         if visualizer_type == 'heatmap':
+            from .heatmap_visualizer import HeatmapVisualizer
             return HeatmapVisualizer(**kwargs)
+        elif visualizer_type == 'time_series':
+            from .time_series_visualizer import TimeSeriesVisualizer
+            return TimeSeriesVisualizer(**kwargs)
         else:
-            available_types = ['heatmap']
-            raise ValueError(f"不支持的可视化器类型: {visualizer_type}. 可用类型: {available_types}")
+            raise ValueError(f"不支持的可视化器类型: {visualizer_type}")
